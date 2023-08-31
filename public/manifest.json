@@ -1,17 +1,16 @@
 {
-    "name": "Laravel Package Tutorial",
-    "short_name": "LPT",
+    "name": "Nexo RIT",
+    "short_name": "Nexo RIT",
     "start_url": "/index.php",
-    "background_color": "#6777ef",
-    "description": "Tutorial of Laravel Package",
-    "display": "fullscreen",
-    "theme_color": "#6777ef",
+    "background_color": "#001a57",
+    "description": "Registro de Inquilinos Temporales",
+    "display": "standalone",
+    "theme_color": "#001a57",
     "icons": [
         {
-            "src": "logo.PNG",
+            "src": "logo.png",
             "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "any maskable"
+            "type": "image/png"
         }
     ]
 }
