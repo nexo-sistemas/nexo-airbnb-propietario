@@ -55,13 +55,11 @@ export default async (numero) => {
         </select>
     </div>
 
-    <!--
-        <div class="col-md-6 col-lg-6">
-            <label for="adjunto-${numero}" class="form-label">Adjuntar documento</label>
-            <div class="input-group">
-                <input type="file" class="form-control" id="adjunto-${numero}" name="adjunto-${numero}">
-            </div>
+    <div class="col-md-6 col-lg-6">
+        <label for="adjunto-${numero}" class="form-label">Adjuntar documento</label>
+        <div class="input-group">
+            <input type="file" class="form-control" id="adjunto-${numero}" name="adjunto-${numero}">
         </div>
-    -->
+    </div>
    `
 }

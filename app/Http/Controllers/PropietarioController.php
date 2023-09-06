@@ -42,6 +42,7 @@ class PropietarioController extends Controller
 
     public function store(Request $request)
     {
+        $directory = 'app-arbn';
         $ficha = new Ficha();
         $ficha->entidad_id = $request->entidad;
         $ficha->departamento_id = $request->departamento_id;
@@ -55,16 +56,19 @@ class PropietarioController extends Controller
         $ficha->save();
         $adjunto = "";
         for ($i = 1; $i <= $request->numero_huesped; $i++) {
+            if ($request->hasFile('adjunto-' . $i)) {
+                $adjunto = $request->file('adjunto-' . $i)->store($directory, 'vultr');
+            }
             $user = new User();
             $user->nombre  = $request->input("nombre-" . $i);
             $user->apellido = $request->input("apellido-" . $i);
             $user->tipo_documento_id = $request->input("tipo_documento_id-" . $i);
             $user->numero_documento = $request->input("numero_documento-" . $i);
+            $user->adjunto = $adjunto;
             $user->user_type = '4';
             $user->principal = $request->input("principal-" . $i);
             $user->nacionalidad = $request->input("nacionalidad-" . $i);
             $user->save();
-
             $fichaUser = new FichaUser();
             $fichaUser->ficha_id = Ficha::find($ficha->uuid)->id;
             $fichaUser->user_id = User::find($user->uuid)->id;
