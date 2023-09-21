@@ -13,7 +13,8 @@ export default defineConfig({
                 "resources/scss/app.scss",
                 "resources/js/app.js",
                 "resources/js/pages/ficha.js",
-                "resources/js/pages/login-propietario.js"
+                "resources/js/pages/login-propietario.js",
+                "resources/js/pages/index.js"
             ],
             refresh: true,
         }),
