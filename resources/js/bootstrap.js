@@ -7,6 +7,7 @@
 import axios from 'axios';
 import { alertMessage } from './function';
 window.axios = axios;
+window.$uuid = '';
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 window.axios.defaults.withCredentials = true

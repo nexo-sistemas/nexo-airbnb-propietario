@@ -4,6 +4,8 @@
     @vite(['resources/js/pages/login-propietario.js'])
 @endsection
 @section('content')
+    <input type="hidden" id="codbase64" value="{{ base64_encode($user->uuid) }}">
+    <input type="hidden" id="indexDB__">
     <main class="main-content position-relative max-height-vh-100 h-100">
         <nav class="navbar navbar-main navbar-expand-lg px-0" id="navbarBlur" navbar-scroll="true" style="background: #001a57">
             <div class="container-fluid">

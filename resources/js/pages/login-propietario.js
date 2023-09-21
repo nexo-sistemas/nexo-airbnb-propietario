@@ -1,7 +1,30 @@
 import { alertMessage, form_data } from "../function";
+import indexDB from "../functions/indexDB";
 
 export default (async () => {
+    let navegador = navigator.userAgent;
 
+    // android
+    if (navigator.userAgent.match(/Android/i)) {
+
+        /*
+        const urlParams  = new URLSearchParams(window.location.search);
+        const uuid = urlParams.get("u");
+        indexDB(uuid).then(() => {
+            const uuidValueIndexDB = document.getElementById('indexDB__');
+            window.location.href = `/?u=${uuidValueIndexDB}`
+        });
+
+        */
+    }
+
+
+    // ios
+    if ( navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i)) {
+        window.location.href = `/${uuidValueIndexDB}`
+    }
+
+    //alert(uuid)
     const loginPropietario = async (formLoginPropietario) => {
         axios.get(`/sanctum/csrf-cookie`).then((result) => {
             axios.post(`${apiURL}/login/propietario`, formLoginPropietario).then(async (resp) => {

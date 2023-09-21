@@ -1,7 +1,7 @@
 {
     "name": "Nexo RIT",
     "short_name": "Nexo RIT",
-    "start_url": "/index.php",
+    "start_url": ".",
     "background_color": "#001a57",
     "description": "Registro de Inquilinos Temporales",
     "display": "standalone",

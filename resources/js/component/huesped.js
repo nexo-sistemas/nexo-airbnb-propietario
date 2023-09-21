@@ -48,17 +48,18 @@ export default async (numero) => {
     </div>
 
     <div class="col-md-6 col-lg-3">
-        <label for="principal-${numero}" class="form-label">Huesped principal</label>
+        <label for="principal-${numero}" class="form-label"><span style="color: red">(*)</span>Huesped principal</label>
         <select id="principal-${numero}" name="principal-${numero}" class="form-select" required>
-            <option selected value="NO">NO</option>
+            <option value="">SELECCIONAR</option>
+            <option value="NO">NO</option>
             <option value="SI">SI</option>
         </select>
     </div>
 
     <div class="col-md-6 col-lg-6">
-        <label for="adjunto-${numero}" class="form-label">Adjuntar documento</label>
+        <label for="adjunto-${numero}" class="form-label"><span style="color: red">(*)</span>Adjuntar documento</label>
         <div class="input-group">
-            <input type="file" class="form-control" id="adjunto-${numero}" name="adjunto-${numero}">
+            <input type="file" class="form-control" id="adjunto-${numero}" name="adjunto-${numero}" required>
         </div>
     </div>
    `
