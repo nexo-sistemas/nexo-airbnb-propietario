@@ -21,6 +21,7 @@ export default (async () => {
 
     // ios
     if ( navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i)) {
+        alert('Estoy desde la web')
         window.location.href = `/${uuidValueIndexDB}`
     }
 
